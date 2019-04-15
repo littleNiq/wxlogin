@@ -15,12 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wx.model.WXSessionModel;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
-public class WXLoginController implements HandlerInterceptor {
+public class WXLoginController implements HandlerInterceptorAdapter {
 
 	private static final Logger logger = LoggerFactory.getLogger(WXLoginController.class);
 
@@ -113,15 +114,6 @@ public class WXLoginController implements HandlerInterceptor {
 		return true;
 	}
 
-	@Override
-	public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
-
-	}
-
-	@Override
-	public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
-
-	}
-
+  
 
 }
