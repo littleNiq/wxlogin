@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
-public class WXLoginController implements HandlerInterceptorAdapter {
+public class WXLoginController extends HandlerInterceptorAdapter {
 
 	private static final Logger logger = LoggerFactory.getLogger(WXLoginController.class);
 
@@ -114,6 +114,6 @@ public class WXLoginController implements HandlerInterceptorAdapter {
 		return true;
 	}
 
-  
+
 
 }
